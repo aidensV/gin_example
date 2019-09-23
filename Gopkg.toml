@@ -36,5 +36,3 @@
 [[constraint]]
   name = "gopkg.in/go-playground/validator.v8"
   version = "8.18.2"
-[metadata.heroku]
-  root-package = "github.com/aidensV/gin_example
