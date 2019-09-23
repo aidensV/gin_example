@@ -11,7 +11,7 @@ import (
 
 func main() {
 	//database config
-	dbUser, dbPassword, dbName := "root", "123456terus", "gorm_crud_example"
+	dbUser, dbPassword, dbName := "postgres", "postgres", "gorm_crud_example"
 	db, err := database.ConnectToDB(dbUser, dbPassword, dbName)
 
 	//unable to connect to database
