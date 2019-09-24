@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"os"
 
 	"github.com/aidensV/gin_example/configs"
 	"github.com/aidensV/gin_example/database"
@@ -34,5 +35,9 @@ func main() {
 	contactRepository := repositories.NewContactRepository(db)
 	route := configs.SetupRoutes(contactRepository)
 
-	route.Run(":8000")
+	port := os.Getenv("PORT")
+	if port == "" {
+		log.Fatal("$PORT must be set")
+	}
+	route.Run(":" + port)
 }
