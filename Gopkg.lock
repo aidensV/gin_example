@@ -14,12 +14,6 @@
   version = "v1.4.0"
 
 [[projects]]
-  name = "github.com/go-sql-driver/mysql"
-  packages = ["."]
-  revision = "72cd26f257d44c1114970e19afddcd812016007e"
-  version = "v1.4.1"
-
-[[projects]]
   name = "github.com/golang/protobuf"
   packages = ["proto"]
   revision = "6c65a5562fc06764971b7c5d05c76c75e84bdbf7"
@@ -33,9 +27,9 @@
 
 [[projects]]
   name = "github.com/jinzhu/gorm"
-  packages = [".","dialects/mysql"]
-  revision = "836fb2c19d84dac7b0272958dfb9af7cf0d0ade4"
-  version = "v1.9.10"
+  packages = [".","dialects/postgres"]
+  revision = "81c17a7e2529c59efc4e74c5b32c1fb71fb12fa2"
+  version = "v1.9.11"
 
 [[projects]]
   name = "github.com/jinzhu/inflection"
@@ -48,6 +42,12 @@
   packages = ["."]
   revision = "27518f6661eba504be5a7a9a9f6d9460d892ade3"
   version = "v1.1.7"
+
+[[projects]]
+  name = "github.com/lib/pq"
+  packages = [".","hstore","oid","scram"]
+  revision = "3427c32cb71afc948325f299f040e53c1dd78979"
+  version = "v1.2.0"
 
 [[projects]]
   name = "github.com/mattn/go-isatty"
@@ -77,13 +77,7 @@
   branch = "master"
   name = "golang.org/x/sys"
   packages = ["unix"]
-  revision = "0a153f010e6963173baba2306531d173aa843137"
-
-[[projects]]
-  name = "google.golang.org/appengine"
-  packages = ["cloudsql"]
-  revision = "c71d63e301d75423acb410203c747cad31e9a5e7"
-  version = "v1.6.3"
+  revision = "c990c680b611ac1aeb7d8f2af94a825f98d69720"
 
 [[projects]]
   name = "gopkg.in/go-playground/validator.v8"
@@ -100,6 +94,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "57a3422a0fc1bbb091efe4f56fd8e348418328f20a25c9e202600742f75a9c7b"
+  inputs-digest = "af8885206c3fa5a6f33566f915c84ca75d604185db012a14b9a8dfa269f7c477"
   solver-name = "gps-cdcl"
   solver-version = 1
