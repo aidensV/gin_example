@@ -35,7 +35,7 @@ func FindAllContacts(repository repositories.ContactRepository) dtos.Response {
 	}
 	var datas = operationResult.Result.(*models.Contacts)
 
-	return dtos.Response{Success: true, Data: datas}
+	return dtos.Response{Data: datas}
 }
 func FindByIdContact(id string, repository repositories.ContactRepository) dtos.Response {
 	operationResult := repository.FindById(id)
