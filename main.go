@@ -2,7 +2,7 @@ package main
 
 import (
 	"log"
-	"os"
+	// "os"
 
 	"github.com/aidensV/gin_example/configs"
 	"github.com/aidensV/gin_example/database"
@@ -12,7 +12,7 @@ import (
 
 func main() {
 	//database config
-	dbUser, dbPassword, dbName := "postgres", "postgres", "gorm_crud_example"
+	dbUser, dbPassword, dbName := "root", "@Crossgg52b", "db_go_inven"
 	db, err := database.ConnectToDB(dbUser, dbPassword, dbName)
 
 	//unable to connect to database
@@ -35,9 +35,9 @@ func main() {
 	contactRepository := repositories.NewContactRepository(db)
 	route := configs.SetupRoutes(contactRepository)
 
-	port := os.Getenv("PORT")
-	if port == "" {
-		log.Fatal("$PORT must be set")
-	}
-	route.Run(":" + port)
+	// port := os.Getenv("PORT")
+	// if port == "" {
+	// 	log.Fatal("$PORT must be set")
+	// }
+	route.Run(":" + "8080")
 }
